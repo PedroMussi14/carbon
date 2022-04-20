@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Eater Comsumption</h1>
+    <form>
+    <div>
+      <label for="heavy meat eater">Heavy meat eater (more than 100g)</label>
+      <input type="radio" name="Consumption" id="heavy" value="heavy">
+    </div>
+    <div>
+      <label for="medium meat eater">Medium meat eater (50g to 99g)</label>
+      <input type="radio" name="Consumption" id="medium" value="medium">
+    </div>
+    <div>
+      <label for="low meat eater">Low meat eater (less than 50g)</label>
+      <input type="radio" name="Consumption" id="low" value="low">
+    </div>
+    <div>
+      <label for="pescaterian">Pescaterian (fish eater)</label>
+      <input type="radio" name="Consumption" id="pescaterian" value="pescaterian">
+    </div>
+    <div>
+      <label for="vegeterian">Vegeterian</label>
+      <input type="radio" name="Consumption" id="vegeterian" value="vegeterian">
+    </div>
+    <div>
+      <label for="vegan">Vegan</label>
+      <input type="radio" name="Consumption" id="vegan" value="vegan">
+    </div>
+    <br />
+    <br />
+    <button type="submit">Submit your data</button>
+  </form>
+  <br />
+  <br />
+  <p>Your carbon footprint is: <input type="text" id="result" /></p>
+
+<link rel="stylesheet" relf="style.css">
+</body>
+</html>
+<script type="text/javascript">document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault()
+  
+    if (document.querySelector("#heavy").checked) {
+      document.querySelector("#result").value = "7.19 kg CO2e per day"
+    }
+    if (document.querySelector("#medium").checked) {
+      document.querySelector("#result").value = "5.63 kg CO2e per day"
+    }
+    if (document.querySelector("#low").checked) {
+      document.querySelector("#result").value = "4.61 kg CO2e per day"
+    }
+    if (document.querySelector("#pescaterian").checked) {
+      document.querySelector("#result").value = "3.91 kg CO2e per day"
+    }
+    if (document.querySelector("#vegetarian").checked) {
+      document.querySelector("#result").value = "3.81 kg CO2e per day"
+    }
+    if (document.querySelector("#vegan").checked) {
+      document.querySelector("#result").value = "2.89 kg CO2e per day"
+    }
+  
+    document.querySelector("form").reset()
+  
+    const data = localStorage.getItem("data")</script>
+    <script type="text/css"
+    body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(109, 162, 119);
+
+}
